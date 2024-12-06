@@ -114,7 +114,16 @@ body {
     font-size: clamp(38px, 7vw, 5.5rem);
 
 }
+.title-slogan{
+    font-size: clamp(25px,10vw,5.5rem);
+}
+.slogan{
 
+    font-size: clamp(25px,10vw,5.5rem);
+}
+.primary-color-font{
+    color: #333333;
+}
 .secondary-color-font {
     color: #e7e7e7;
 }
