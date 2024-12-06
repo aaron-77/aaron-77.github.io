@@ -38,7 +38,11 @@ let cambiarIdioma = (ev) =>{
 let toggle = false;
 const descargar = async(ev)=>{
     ev.preventDefault();
-    const ruta = `/resources/curriculum.pdf`;
+    const link = document.createElement('a')
+    link.href ="/resources/curriculum.pdf" //URL.createObjectURL(archivo)
+    link.download = "curriculum.pdf";
+    link.dispatchEvent(new MouseEvent('click'));
+    /* const ruta = "/resources/curriculum.pdf";
     try {
         let respuesta = await fetch(ruta);
     if(!respuesta.ok){
@@ -46,14 +50,13 @@ const descargar = async(ev)=>{
     }
     let archivo = respuesta.blob;
     const link = document.createElement('a');
-    link.href = URL.createObjectURL(archivo)
-    link.download = "curriculum.pdf";
+    
     link.click();
     URL.revokeObjectURL(link.href);    
     } catch (error) {
         console.log(error);
         alert("Ha ocurrido al descargar el curriculum")
-    }
+    } */
     
 }
 let handleResize = () => {
